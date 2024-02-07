@@ -87,7 +87,7 @@ public class Roll implements ActionListener {
 	private static void runGUI(){
 		JFrame.setDefaultLookAndFeelDecorated(true);
 		
-		Roll greeting = new Roll();
+		new Roll();
 	}
 	
 	public static void main(String[] args) {
