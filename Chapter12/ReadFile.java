@@ -1,7 +1,7 @@
 package Chapter12;
 
 import java.io.*;
-public class das {
+public class ReadFile {
     public static void main(String[] args) {
         File textFile = new File("\\\\fluorine\\2024\\HOME\\20240107\\APComputerScience\\Chapter12\\TextFile\\Wonder.txt");
         FileReader in;

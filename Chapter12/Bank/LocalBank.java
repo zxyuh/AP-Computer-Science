@@ -4,7 +4,7 @@
  * Lawrenceville Press
  * August 21, 2006
  */
- 
+ package Chapter12.Bank;
  import java.io.*;
  import java.util.Scanner;
   

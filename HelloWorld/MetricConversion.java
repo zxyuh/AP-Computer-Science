@@ -1,6 +1,13 @@
+<<<<<<< HEAD
 package HelloWorld;
 
 import javax.swing.*;
+=======
+package Chapter11;
+
+import javax.swing.*;
+import java.awt.*;
+>>>>>>> 8ef747e0d9ebec6b01b89ce3ebde258698f9dd99
 import java.awt.event.*;
 
 public class MetricConversion implements ActionListener{
@@ -13,7 +20,10 @@ public class MetricConversion implements ActionListener{
         //create and set up frame
         frame = new JFrame("Metric Conversion");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+<<<<<<< HEAD
         frame.setSize(600, 150);
+=======
+>>>>>>> 8ef747e0d9ebec6b01b89ce3ebde258698f9dd99
 
         //create a content pane with a boxlayout
         contentPane = new JPanel();
@@ -23,7 +33,10 @@ public class MetricConversion implements ActionListener{
         //create a combo box and a descriptive label
         conversionPrompt = new JLabel("Select A Conversion");
         conversionPrompt.setAlignmentX(JLabel.LEFT_ALIGNMENT);
+<<<<<<< HEAD
         conversionPrompt.setSize(500, 100);
+=======
+>>>>>>> 8ef747e0d9ebec6b01b89ce3ebde258698f9dd99
         contentPane.add(conversionPrompt);
 
         String[] list = {"Inches to Centimeters", "Foot to Meter", "Gallon to Liters", "Pound to Kilogram"};
@@ -42,7 +55,11 @@ public class MetricConversion implements ActionListener{
         frame.setContentPane(contentPane);
 
         //size and then display the frame
+<<<<<<< HEAD
         //frame.pack();
+=======
+        frame.pack();
+>>>>>>> 8ef747e0d9ebec6b01b89ce3ebde258698f9dd99
         frame.setVisible(true);
     }
 
@@ -66,7 +83,11 @@ public class MetricConversion implements ActionListener{
     private static void runGUI(){
         JFrame.setDefaultLookAndFeelDecorated(true);
 
+<<<<<<< HEAD
         new MetricConversion();
+=======
+        MetricConversion greeting = new MetricConversion();
+>>>>>>> 8ef747e0d9ebec6b01b89ce3ebde258698f9dd99
     }
 
     public static void main(String[] args) {
@@ -78,4 +99,8 @@ public class MetricConversion implements ActionListener{
     }
 
     
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 8ef747e0d9ebec6b01b89ce3ebde258698f9dd99

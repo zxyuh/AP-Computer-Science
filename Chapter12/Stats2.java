@@ -1,3 +1,4 @@
+package Chapter12;
 import java.io.*;
 import java.util.Scanner;
 public class Stats2 {

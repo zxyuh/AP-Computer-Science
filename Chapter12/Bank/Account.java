@@ -1,7 +1,7 @@
 /**
  * Account class.
  */
-
+ package Chapter12.Bank;
  import java.io.*; 
  import java.text.NumberFormat;
  

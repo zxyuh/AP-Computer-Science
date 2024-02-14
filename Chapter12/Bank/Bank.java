@@ -1,7 +1,7 @@
 /**
  * Bank class.
  */
-
+ package Chapter12.Bank;
  import java.util.ArrayList;
  import java.io.*;
  import java.util.Scanner;

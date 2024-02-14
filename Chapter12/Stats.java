@@ -1,3 +1,5 @@
+package Chapter12;
+
 import java.io.*;
 public class Stats {
     public static void main(String[] args) {

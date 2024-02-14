@@ -1,7 +1,7 @@
 /**
  * Customer class.
  */
-
+ package Chapter12.Bank;
  import java.io.*;
 
  public class Customer  {
