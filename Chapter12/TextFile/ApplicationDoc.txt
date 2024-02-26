@@ -1,0 +1,3 @@
+/** prompt user for a phrase */
+/** convert phrase to char array and count letter occurrences */
+/** show letter occurrences */
