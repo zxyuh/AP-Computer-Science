@@ -4,7 +4,6 @@ import java.util.ArrayList;
  
  public class Sorts {	
 
-
 	/**
 	 * Sorts an array of data from low to high
 	 * pre: none
@@ -23,7 +22,6 @@ import java.util.ArrayList;
 		}
 	}
 
-
 	/**
 	 * Sorts an array of objects from low to high
 	 * pre: none
@@ -41,6 +39,31 @@ import java.util.ArrayList;
 			}	
 		}
 	}
+
+	public static void insertionSort(int[] items){
+		int temp, previousIndex;
+
+		for (int index = 1; index < items.length; index++) {
+			temp = items[index];
+			previousIndex = index - 1;
+	
+			while ((items[previousIndex] > temp) && (previousIndex > 0)) {
+				items[previousIndex + 1] = items[previousIndex];
+				previousIndex -= 1;
+			}
+
+			if (items[previousIndex] > temp) {
+				items[previousIndex + 1] = items[previousIndex];
+				items[previousIndex] = temp;
+			} else {
+				items[previousIndex + 1] = temp;
+			}
+
+		}
+	}
+
+	
+
 
 
 
