@@ -1,8 +1,6 @@
 package Chapter13;
 
 import java.util.ArrayList;
-
-import javafx.scene.shape.Circle;
  
  public class Sorts {	
 
@@ -12,14 +10,14 @@ import javafx.scene.shape.Circle;
 	 * pre: none
 	 * post: items has been sorted from low to high
 	 */
-	public static void selectionSort(Circle[] test) {
+	public static void selectionSort(int[] items) {
 		
-		for (int index = 0; index < test.length; index++) {
-			for (int subIndex = index; subIndex < test.length; subIndex++) {
-				if (test[subIndex] < test[index]) {
-					int temp = test[index];
-					test[index] = test[subIndex];
-					test[subIndex] = temp;
+		for (int index = 0; index < items.length; index++) {
+			for (int subIndex = index; subIndex < items.length; subIndex++) {
+				if (items[subIndex] < items[index]) {
+					int temp = items[index];
+					items[index] = items[subIndex];
+					items[subIndex] = temp;
 				}
 			}	
 		}

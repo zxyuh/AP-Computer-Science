@@ -1,10 +1,8 @@
 package Chapter13;
 import java.util.Scanner;
-
-import javafx.scene.shape.Circle;
-
 import java.util.Random;
 public class ArrayListSort {
+
     public static void displayArray(Circle[] array){
         for(int i = 0; i < array.length; i++){
             System.out.println(array[i] + " ");
