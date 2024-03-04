@@ -39,6 +39,8 @@ public class ApplicationDoc {
                 line = line.trim();
                 if (line.startsWith("/**") && line.endsWith("*/")) {
                     comments.add(line);
+                } else if(line.startsWith("*") || line.startsWith("/*")){
+                    comments.add(line);
                 }
             }
             System.out.println(comments);
