@@ -103,6 +103,16 @@ import java.util.ArrayList;
 		}
 	}
 
+	public static int recursionSort(int num){
+		int result;
+		if(num == 0){
+			result = 1;
+		} else {
+			result = num * recursionSort(num - 1);
+		}
+		return result;
+	}
+
 	
 
 
