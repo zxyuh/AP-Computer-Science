@@ -1,5 +1,9 @@
 package Chapter13;
-
+/*
+ * Omar Faruk
+ * MergeSort
+ * 3/8/24
+ */
 public class ObjectMergeSort {
     public static void displayArray(String[] array){
         for(int i = 0; i < array.length; i++){

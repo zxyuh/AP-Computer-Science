@@ -127,7 +127,7 @@ import java.util.ArrayList;
 		}
 	}	
 	
-	//Sorts an array of integers using Merge Sort	
+	//Sorts an array of Strings using Merge Sort	
 	public static void mergesort(String[] items, int start, int end) {
 		if (start < end) {
 			int mid = (start + end) / 2;
