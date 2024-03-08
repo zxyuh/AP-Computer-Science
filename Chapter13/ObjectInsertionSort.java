@@ -9,7 +9,7 @@ public class ObjectInsertionSort {
     }
 
     public static void main(String[] args) {
-        String[] stringObjects = {"Apple", "World", "Elephant", "Zebra", "Yip", "Bap"};
+        String[] stringObjects = {"Apple", "World", "Elephant", "Zebra", "Yip", "Bap", "X-Ray", "Fish", "Nine", "Train"};
 
         System.out.println("Unsorted: ");
         displayArray(stringObjects);
