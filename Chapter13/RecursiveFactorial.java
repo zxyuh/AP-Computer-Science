@@ -6,6 +6,16 @@ package Chapter13;
  */
 import java.util.Scanner;
 public class RecursiveFactorial {
+    public static int recursionSort(int num){
+		int result;
+		if(num == 0){
+			result = 1;
+		} else {
+			result = num * recursionSort(num - 1);
+		}
+		return result;
+	}
+
     public static void main(String[] args) {
         int num;
         Scanner input = new Scanner(System.in);
@@ -14,7 +24,7 @@ public class RecursiveFactorial {
         num = input.nextInt();
         input.close();
 
-        System.out.println("Factorial is: " + Sorts.recursionSort(num));
+        System.out.println("Factorial is: " + recursionSort(num));
     }
     
 }
