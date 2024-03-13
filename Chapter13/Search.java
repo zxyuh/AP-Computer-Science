@@ -41,14 +41,13 @@ public class Search {
                 return -1;
             } else {
                 mid = (start + end) / 2;
-                System.out.print("Examining " + mid);
-                System.out.println(" Start:" + start + " " + " End:" + end);
+                System.out.println("Examining " + mid);
                 if(goal == items[mid]){
                     return mid;
                 } else if(goal < items[mid]){
-                    end--;
+                    end = end - 1;
                 } else {
-                    start++;
+                    start = start + 1;
                 }
             }
         } while (goal != items[mid]);
