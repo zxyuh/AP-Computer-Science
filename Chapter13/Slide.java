@@ -52,10 +52,14 @@ public class Slide {
         } else {
             slideData[row][col] = NON_COLONY;
             return(1+
-                    collectCells(row+1, col)+
-                    collectCells(row-1, col)+
-                    collectCells(row, col+1)+
-                    collectCells(row, col-1));					
+                    collectCells(row + 1, col)+
+                    collectCells(row - 1, col)+
+                    collectCells(row, col + 1)+
+                    collectCells(row, col - 1))+
+                    collectCells(row + 1, col + 1)+
+                    collectCells(row + 1, col - 1)+
+                    collectCells(row - 1, col + 1)+
+                    collectCells(row - 1, col - 1);					
          }
      }
  

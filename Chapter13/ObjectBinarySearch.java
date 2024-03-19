@@ -28,12 +28,5 @@ public class ObjectBinarySearch {
         input.close();
         location = Search.binarySearch(words, 0, words.length - 1, locateString);
         System.out.println("String is at postion: " + location);
-
-
-
-
-
-
-
     }
 }

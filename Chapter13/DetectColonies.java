@@ -3,7 +3,6 @@ package Chapter13;
  * Slide class.
  */
 
-import java.io.*;
  
 public class DetectColonies { 	
       
