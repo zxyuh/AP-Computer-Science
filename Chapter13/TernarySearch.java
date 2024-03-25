@@ -1,4 +1,9 @@
 package Chapter13;
+/*
+ * Omar Faruk
+ * Ternary Search
+ * 3/25/24
+ */
 
 import java.util.Scanner;
 
@@ -31,7 +36,7 @@ public class TernarySearch {
         locateNum = input.nextInt();
         input.close();
         System.out.println("Locating: " + locateNum);
-        location = Search.TernarySearch(numArray, 0, numArray.length - 1, locateNum);
+        location = Search.ternarySearch(numArray, 0, numArray.length -1, locateNum);
         System.out.println("Number at postion: " + location);
     }
     

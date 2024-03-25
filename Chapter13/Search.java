@@ -55,25 +55,43 @@ public class Search {
         return mid; 
     }
 
-    public static int TernarySearch(int[] items, int start, int end, int goal){
-        if(start > end){
-            return -1;
-        } else {
-            int mid1 = start + (start + end) / 3;
-            int mid2 = end - (start + end) / 3;
-            System.out.println("Examining " + mid1 + " & " + mid2);
-            if (goal == items[mid1]){
-                return mid1;
-            } else if (goal == items[mid2]){
-                return mid2;
-            } else if ( goal < items[mid1]){
-                return TernarySearch(items, start, mid1 + 1, goal);
-            } else if (goal > items[mid2]){
-                return TernarySearch(items, mid2 - 1, end, goal);
-            } else {
-                return TernarySearch(items, mid1 - 1, mid2 + 1, goal);
-            }
+    //l = start, r = end, key = goal, ar = items
+    public static int ternarySearch(int[] items, int start, int end, int goal){
+       if(end >= 1){
+        int mid1 = start + (end - start) / 3;
+        int mid2 = end - (end - start) / 3;
+        System.out.println("Searching: " + mid1 + " & " + mid2);
+
+        if(items[mid1] == goal){
+            return mid1;
         }
+        if(items[mid2] == goal){
+            return mid2;
+        }
+
+        if(goal < items[mid1]){
+            //l, end, key, items
+            return ternarySearch(items, start, mid1 - 1, goal);
+        } else if (goal > items[mid2]){
+            return ternarySearch(items, mid2 - 1, end, goal);
+        } else {
+            return ternarySearch(items, mid1 + 1 , mid2 - 1, goal);
+        }
+       }
+       return -1;
+        
+    }
+
+    public static int interpolationSearch(int[] items, int start, int end, int goal){
+        int mid = ((goal - items[start]) / (items[end] - items[start])) * (end - start) + start;
+        if(goal == items[mid]){
+            return mid;
+        } else if(goal > items[mid]){
+            return interpolationSearch(items, start + 1, end, goal);
+        } else {
+            return interpolationSearch(items, start - 1, end, goal);
+        }
+
     }
     
 }

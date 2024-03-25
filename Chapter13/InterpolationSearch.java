@@ -1,11 +1,12 @@
 package Chapter13;
 /*
  * Omar Faruk
- * Search Locations
- * 3/11/24
+ * Interpolation Search
+ * 3/22/24
  */
 import java.util.*;
-public class SearchLocations {
+public class InterpolationSearch {
+
     public static void displayArray(int[] array){
         for(int i = 0; i < array.length; i++){
             System.out.print(array[i] + " ");
@@ -14,33 +15,27 @@ public class SearchLocations {
     }
 
     public static void main(String[] args) {
-        int location, numItems, searchNum;
-        int[] numArray;
         Scanner input = new Scanner(System.in);
-
+        int numFind, location;
+        
         //Adds integers into array and sorts the array
         System.out.println("Enter Number of Elements: ");
-        numItems = input.nextInt();
-        numArray = new int[numItems];
+        int numItems = input.nextInt();
+        int[] numArray = new int[numItems];
         for(int i = 0; i < numArray.length; i++){
             numArray[i] = (int) (Math.random() * 100);
         }
+
         Sorts.selectionSort(numArray);
-        System.out.println("Your Numbers: ");
+        System.out.println("Your Sorted Numbers: ");
         displayArray(numArray);
-        
 
-        //displays the location of the number being searched
-        System.out.println("Enter a Number to Search For: ");
-        searchNum = input.nextInt();
+        System.out.println("Enter A Number to Search: ");
+        numFind = input.nextInt();
         input.close();
-        location = Search.binarySearch(numArray, 0, numArray.length - 1, searchNum);
-        System.out.println("Number at position: " + location);
-        
-        
 
-            
-        
-
+        System.out.println(numArray.length + " " + numFind);
+        location = Search.interpolationSearch(numArray, 0, numArray.length - 1, numFind);
+        System.out.println("Item is at position " + location);
     }
 }
