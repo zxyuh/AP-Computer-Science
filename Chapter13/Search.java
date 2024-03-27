@@ -55,7 +55,7 @@ public class Search {
         return mid; 
     }
 
-    //l = start, r = end, key = goal, ar = items
+    //Ternary Search Method
     public static int ternarySearch(int[] items, int start, int end, int goal){
        if(end >= 1){
         int mid1 = start + (end - start) / 3;
@@ -70,7 +70,6 @@ public class Search {
         }
 
         if(goal < items[mid1]){
-            //l, end, key, items
             return ternarySearch(items, start, mid1 - 1, goal);
         } else if (goal > items[mid2]){
             return ternarySearch(items, mid2 - 1, end, goal);
@@ -82,6 +81,7 @@ public class Search {
         
     }
 
+    //Interpolation Search Method
     public static int interpolationSearch(int[] items, int start, int end, int goal){
         int mid = ((goal - items[start]) / (items[end] - items[start])) * (end - start) + start;
         if(goal == items[mid]){
