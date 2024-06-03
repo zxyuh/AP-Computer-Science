@@ -4,13 +4,14 @@ package Chapter13;
  */
 
  
-public class DetectColonies2 { 	
-      
+ public class DetectColonies2 {  
+  
     public static void main(String[] args) {
-         
-        Slide2 culture = new Slide2("slide2.dat");
+       
+        Slide2 culture = new Slide2("I:\\APComputerScience\\Chapter13\\slide2.dat");
         culture.displaySlide();
         culture.displayColonies();
-        culture.displaySlide();
+       
     }
- }
+}
+ 

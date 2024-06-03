@@ -1,88 +1,70 @@
-import javax.swing.*;
+package Antagrams;
 
-import java.awt.*;
+// Java program to create a blank text field with a 
+// given initial text and given number of columns
 import java.awt.event.*;
-import java.util.Scanner;
-
-public class test implements ActionListener{
-    public static final int X = 3;
-    public static final int Y = 3;
-    JFrame frame;
-    JPanel contentPane;
-    JButton[][] lightBoard;
-
-    public test(){
-        //set up the frame
-        frame = new JFrame("Game Of Light");
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frame.setBackground(Color.white);
-        
-        //create a content pane with a grid layout
-        contentPane = new JPanel();
-        contentPane.setLayout(new GridLayout(3, 3, 0, 0));
-        contentPane.setBorder(BorderFactory.createEmptyBorder(5, 5, 5, 5));
-
-        lightBoard = new JButton[X][Y];
-        for (int i = 0; i < lightBoard.length; i++) {
-			for (int j = 0; j < lightBoard[0].length; j++) {
-				lightBoard[i][j] = new JButton();
-                lightBoard[i][j].setActionCommand(i + " " + j);
-                lightBoard[i][j].addActionListener(new WorldGridListener());
-                lightBoard[i][j].setBackground(Color.black);
-                contentPane.add(lightBoard[i][j]);
-
-			}
-		}
-
-        //answer label 
-      
-        //add content pane to frame
-        //contentPane.add(subPanel);
-        frame.setContentPane(contentPane);
-
-        // size and display
-        frame.pack();
-        frame.setVisible(true);
-        
+import javax.swing.*;
+class text extends JFrame implements ActionListener {
+    // JTextField
+    static JTextField t;
+ 
+    // JFrame
+    static JFrame f;
+ 
+    // JButton
+    static JButton b;
+ 
+    // label to display text
+    static JLabel l;
+ 
+    // main class
+    public static void main(String[] args)
+    {
+        // create a new frame to store text field and button
+        f = new JFrame("textfield");
+ 
+        // create a label to display text
+        l = new JLabel("nothing entered");
+ 
+        // create a new button
+        b = new JButton("submit");
+ 
+        // create a object of the text class
+        text te = new text();
+ 
+        // addActionListener to button
+        b.addActionListener(te);
+ 
+        // create a object of JTextField with 16 columns and a given initial text
+        t = new JTextField("enter the text", 16);
+ 
+        // create a panel to add buttons and textfield
+        JPanel p = new JPanel();
+ 
+        // add buttons and textfield to panel
+        p.add(t);
+        p.add(b);
+        p.add(l);
+ 
+        // add panel to frame
+        f.add(p);
+ 
+        // set the size of frame
+        f.setSize(300, 300);
+ 
+        f.show();
     }
-
-    public void actionPerformed(ActionEvent event){
-        String eventName = event.getActionCommand();
-
-    }
-
-    class WorldGridListener implements ActionListener {
-   	
-        /**
-         * Turns a Button yellow
-         * pre: btnCoords is a string with a integer followed by a space
-         * followed by a second integer.
-         * post: Button turned Yellow.
-         */
-        public void actionPerformed(ActionEvent event) {
-            String btnCoords = event.getActionCommand();
-            int spacePosition, row, col;
-            
-            spacePosition = btnCoords.indexOf(" ");
-            row = Integer.parseInt(btnCoords.substring(0, spacePosition));
-            col = Integer.parseInt(btnCoords.substring(spacePosition + 1));
-            //lifeGame.addLiveCell(row, col);		                //add a live cell
-            lightBoard[row][col].setBackground(Color.yellow);		//show a live cell
+ 
+    // if the button is pressed
+    public void actionPerformed(ActionEvent e)
+    {
+        String s = e.getActionCommand();
+        if (s.equals("submit")) {
+            // set the text of the label to the text of the field
+            l.setText(t.getText());
+ 
+            // set the text of field to blank
+            t.setText("  ");
         }
- }
-    
-    private static void runGUI(){
-		JFrame.setDefaultLookAndFeelDecorated(true);
-		
-		test greeting = new test();
-	}
-	
-	public static void main(String[] args) {
-		javax.swing.SwingUtilities.invokeLater(new Runnable(){
-			public void run(){
-				runGUI();
-			}
-		});
-	}
-    
+    }
 }

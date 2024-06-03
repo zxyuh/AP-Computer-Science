@@ -45,9 +45,9 @@ public class Search {
                 if(goal == items[mid]){
                     return mid;
                 } else if(goal < items[mid]){
-                    end = end - 1;
+                    end = mid - 1;
                 } else {
-                    start = start + 1;
+                    start = mid + 1;
                 }
             }
         } while (goal != items[mid]);
